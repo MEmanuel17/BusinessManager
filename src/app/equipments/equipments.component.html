@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-header">
+        Equipments
+    </div>
+
+<div class="card-body">
+    <div class="row">
+        <div class="col-md-2">Filter by:</div>
+        <div class="col-md-4">
+            <input type="text" (ngModel)='listFilter'>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Filtered by: {{ listFilter }}</h4>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <div class="table" *ngIf='equipments.length'>
+            <thead>
+                <tr>
+                    <th style="color: black;">Details</th>
+                    <th>Equipments name</th>
+                    <th>Date of delivery</th>
+                    <th>Year of buyed</th>
+                    <th>Product CODE</th>
+                    <th>Equipment condition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let equipment of equipments'>
+                    <td>{{ equipment.equipmentsID }}</td>
+                    <!-- <td>{{ equipment.equipmentsName }}</td> -->
+                    <td>
+                        <a routerLink="/equipment/Equipment-Detail" >
+                            {{ equipment.equipmentsName}}
+                        </a>
+                    </td>
+                    <td>{{ equipment.dateOfDelivery }}</td>
+                    <td>{{ equipment.YearofBuyed }}</td>
+                    <td>{{ equipment.productCode }}</td>
+                    <td>{{ equipment.condition }}</td>
+                </tr>
+            </tbody>
+        </div>
+    </div>
+</div>
+
+</div>

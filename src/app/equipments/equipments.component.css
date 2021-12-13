@@ -1,0 +1,14 @@
+th, tr, td{
+    border: 1px solid rgb(0, 0, 0);
+}
+td{
+    text-align: center;
+    color: black;
+}
+td a{
+    color: blue;
+    text-decoration: none;
+}
+th{
+    color: red;
+}

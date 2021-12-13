@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div 
+        *ngIf="!isAuthenticated"
+        class="col-auto bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <app-sidebar-components></app-sidebar-components>
+            </div>
+        </div>
+        <div class="col py-3" style="margin-top: 3.5vw;">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
